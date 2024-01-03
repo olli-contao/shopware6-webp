@@ -84,7 +84,7 @@ class WebpConvertor
             return true;
         }
 
-        if (filemtime($imagePath) < filemtime($webpPath)) {
+        if (filemtime($imagePath) > filemtime($webpPath)) {
             return true;
         }
 
