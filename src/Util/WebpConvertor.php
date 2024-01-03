@@ -64,7 +64,8 @@ class WebpConvertor
     {
         $options = [];
         $options['metadata'] = 'none';
-        $options['quality'] = 100;
+        $options['quality'] = 'auto';
+
 
         return $options;
     }
