@@ -64,8 +64,6 @@ class WebpConvertor
     {
         $options = [];
         $options['metadata'] = 'none';
-        $options['quality'] = 'auto';
-
 
         return $options;
     }
@@ -85,7 +83,7 @@ class WebpConvertor
             return true;
         }
 
-        if (filemtime($imagePath) > filemtime($webpPath)) {
+        if (filemtime($imagePath) < filemtime($webpPath)) {
             return true;
         }
 
