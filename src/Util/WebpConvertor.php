@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 namespace Yireo\Webp\Util;
-
+use Shopware\Core\Content\Media;
 use League\Flysystem\FileNotFoundException;
 use Symfony\Component\Asset\UrlPackage;
 use Symfony\Component\HttpKernel\KernelInterface;
