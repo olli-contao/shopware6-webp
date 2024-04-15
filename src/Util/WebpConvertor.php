@@ -34,12 +34,12 @@ class WebpConvertor
     }
 
     /**
-     * @param string $imageUrl
+     * @param MediaEntity $media
      * @return string
      */
-    public function convertImageUrl(string $imageUrl): string
+    public function convertImageUrl(MediaEntity $media): string
     {
-        $imagePath = $this->getFileFromImageUrl($imageUrl);
+        $imagePath = $media->getPath();
         $webpPath = preg_replace('/\.(png|jpg)$/', '.webp', $imagePath);
         if ($this->shouldConvert($imagePath, $webpPath) === false) {
             return $imageUrl;
