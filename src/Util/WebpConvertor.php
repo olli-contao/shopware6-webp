@@ -34,10 +34,10 @@ class WebpConvertor
     }
 
     /**
-     * @param MediaEntity $media
+     * @param Shopware\Core\Content\Media\MediaEntity $media
      * @return string
      */
-    public function convertImageUrl(MediaEntity $media): string
+    public function convertImageUrl(Shopware\Core\Content\Media\MediaEntity $media): string
     {
         $imagePath = $media->getPath();
         $webpPath = preg_replace('/\.(png|jpg)$/', '.webp', $imagePath);
