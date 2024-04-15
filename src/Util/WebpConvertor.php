@@ -39,7 +39,7 @@ class WebpConvertor
      */
     public function convertImageUrl(\Shopware\Core\Content\Media\MediaEntity $media): string
     {
-        $imagePath = getFileFromImageUrl($media->getUrl());
+        $imagePath = $this->getFileFromImageUrl($media->getUrl());
         $webpPath = preg_replace('/\.(png|jpg)$/', '.webp', $imagePath);
         if ($this->shouldConvert($imagePath, $webpPath) === false) {
             return $imageUrl;
